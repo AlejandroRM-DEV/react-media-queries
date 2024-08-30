@@ -1,7 +1,7 @@
 {
-  "name": "mx-hooks",
+  "name": "@alejandrorm-dev/mx-hooks",
   "version": "1.0.0",
-  "description": "",
+  "description": "Custom React hooks for managing state and effects in a more modular way",
   "main": "index.js",
   "type": "module",
   "scripts": {
@@ -13,6 +13,16 @@
   },
   "author": "Alejandro Ramírez Muñoz",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AlejandroRM-DEV/mx-hooks.git"
+  },
+  "keywords": [
+    "react",
+    "hooks",
+    "state management",
+    "effects"
+  ],
   "devDependencies": {
     "@commitlint/cli": "^19.4.0",
     "@commitlint/config-conventional": "^19.2.2",
@@ -35,5 +45,13 @@
   "dependencies": {
     "jsdom": "^25.0.0",
     "react": "^16.14.0"
-  }
+  },
+  "peerDependencies": {
+    "react": ">=16.14.0"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not op_mini all"
+  ]
 }
