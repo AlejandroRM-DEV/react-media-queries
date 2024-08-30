@@ -1,11 +1,17 @@
-# mx-hooks
+# React Media Queries
 
-`mx-hooks` is a React hooks library that provides useful custom hooks for responsive design and media queries.
+`react-media-queries` is a React hooks library that provides useful custom hooks for responsive design and media queries.
 
 ## Installation
 
 ```bash
-npm install mx-hooks
+npm i @alejandrorm-dev/react-media-queries
+```
+
+## Demo
+
+```
+TODO
 ```
 
 ## Hooks
@@ -22,11 +28,7 @@ import { useMediaQuery } from 'mx-hooks';
 function MyComponent() {
   const isLargeScreen = useMediaQuery('(min-width: 1200px)');
 
-  return (
-    <div>
-      {isLargeScreen ? 'Large screen' : 'Small screen'}
-    </div>
-  );
+  return <div>{isLargeScreen ? 'Large screen' : 'Small screen'}</div>;
 }
 ```
 
