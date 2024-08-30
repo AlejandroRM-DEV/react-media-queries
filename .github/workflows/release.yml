@@ -19,7 +19,6 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '16'
-          registry-url: 'https://registry.npmjs.org'
 
       - name: Install dependencies
         run: npm ci
@@ -31,6 +30,9 @@ jobs:
         run: |
           git config user.name "GitHub Actions"
           git config user.email "actions@github.com"
+
+      - name: Authenticate with npm registry
+        run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
 
       - name: Run release-it
         env:
