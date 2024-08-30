@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect } from 'react';
 
 /**
  * A constant object containing common media queries.
@@ -10,11 +10,11 @@ import { useState, useEffect } from "react";
  * @property {string} isPortrait - Media query for portrait orientation.
  */
 const mediaQueries = {
-	isDesktop: "(min-width: 1025px)",
-	isTablet: "(min-width: 768px) and (max-width: 1024px)",
-	isMobile: "(max-width: 767px)",
-	isLandscape: "(orientation: landscape)",
-	isPortrait: "(orientation: portrait)",
+  isDesktop: '(min-width: 1025px)',
+  isTablet: '(min-width: 768px) and (max-width: 1024px)',
+  isMobile: '(max-width: 767px)',
+  isLandscape: '(orientation: landscape)',
+  isPortrait: '(orientation: portrait)',
 };
 
 /**
@@ -27,20 +27,18 @@ const mediaQueries = {
  * @returns {boolean} - `true` if the media query matches the current viewport, `false` otherwise.
  */
 export function useMediaQuery(query) {
-	const [matches, setMatches] = useState(
-		() => window.matchMedia(query).matches
-	);
+  const [matches, setMatches] = useState(() => window.matchMedia(query).matches);
 
-	useEffect(() => {
-		const mediaQueryList = window.matchMedia(query);
-		const handleChange = (e) => setMatches(e.matches);
+  useEffect(() => {
+    const mediaQueryList = window.matchMedia(query);
+    const handleChange = (e) => setMatches(e.matches);
 
-		mediaQueryList.addEventListener("change", handleChange);
+    mediaQueryList.addEventListener('change', handleChange);
 
-		return () => mediaQueryList.removeEventListener("change", handleChange);
-	}, [query]);
+    return () => mediaQueryList.removeEventListener('change', handleChange);
+  }, [query]);
 
-	return matches;
+  return matches;
 }
 
 /**
@@ -57,18 +55,18 @@ export function useMediaQuery(query) {
  * @returns {boolean} isLandscape - `true` if the viewport orientation is landscape, `false` otherwise.
  * @returns {boolean} isPortrait - `true` if the viewport orientation is portrait, `false` otherwise.
  */
-export function useMediaQueries() {
-	const isDesktop = useMediaQuery(mediaQueries.isDesktop);
-	const isTablet = useMediaQuery(mediaQueries.isTablet);
-	const isMobile = useMediaQuery(mediaQueries.isMobile);
-	const isLandscape = useMediaQuery(mediaQueries.isLandscape);
-	const isPortrait = useMediaQuery(mediaQueries.isPortrait);
+export function useMediaQueries(queries = mediaQueries) {
+  const isDesktop = useMediaQuery(queries.isDesktop);
+  const isTablet = useMediaQuery(queries.isTablet);
+  const isMobile = useMediaQuery(queries.isMobile);
+  const isLandscape = useMediaQuery(queries.isLandscape);
+  const isPortrait = useMediaQuery(queries.isPortrait);
 
-	return {
-		isDesktop,
-		isTablet,
-		isMobile,
-		isLandscape,
-		isPortrait,
-	};
+  return {
+    isDesktop,
+    isTablet,
+    isMobile,
+    isLandscape,
+    isPortrait,
+  };
 }
