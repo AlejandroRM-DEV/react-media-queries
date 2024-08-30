@@ -1,15 +1,23 @@
-# mx-hooks
+# React Media Queries
+
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 [![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
-`mx-hooks` is a React hooks library that provides useful custom hooks for responsive design and media queries.
+`react-media-queries` is a React hooks library that provides useful custom hooks for responsive design and media queries.
 
 ## Installation
 
 ```bash
-npm install mx-hooks
+npm i @alejandrorm-dev/react-media-queries
 ```
+
+## Demo
+
+
+https://github.com/user-attachments/assets/dd7719a8-a3bd-4da5-93c2-126bdfc8ceb7
+
+
 
 ## Hooks
 
@@ -25,11 +33,7 @@ import { useMediaQuery } from 'mx-hooks';
 function MyComponent() {
   const isLargeScreen = useMediaQuery('(min-width: 1200px)');
 
-  return (
-    <div>
-      {isLargeScreen ? 'Large screen' : 'Small screen'}
-    </div>
-  );
+  return <div>{isLargeScreen ? 'Large screen' : 'Small screen'}</div>;
 }
 ```
 
@@ -90,6 +94,7 @@ This project is licensed under the MIT License.
 ## Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
+
 ## Contributors ✨
 
 Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):

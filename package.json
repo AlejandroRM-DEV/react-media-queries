@@ -1,8 +1,8 @@
 {
-  "name": "@alejandrorm-dev/mx-hooks",
-  "version": "1.2.0",
+  "name": "@alejandrorm-dev/react-media-queries",
+  "version": "1.0.0",
   "private": false,
-  "description": "Custom React hooks for managing state and effects in a more modular way",
+  "description": "React hooks library that provides useful custom hooks for responsive design and media queries.",
   "main": "index.js",
   "type": "module",
   "scripts": {
@@ -16,8 +16,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/AlejandroRM-DEV/mx-hooks.git"
+    "url": "https://github.com/AlejandroRM-DEV/react-media-queries.git"
   },
+  "bugs": {
+    "url": "https://github.com/AlejandroRM-DEV/react-media-queries/issues"
+  },
+  "homepage": "https://github.com/AlejandroRM-DEV/react-media-queries#readme",
   "keywords": [
     "react",
     "hooks",
