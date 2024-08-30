@@ -33,6 +33,7 @@
     "vitest": "^2.0.5"
   },
   "dependencies": {
+    "jsdom": "^25.0.0",
     "react": "^16.14.0"
   }
 }
