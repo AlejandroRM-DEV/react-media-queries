@@ -1,6 +1,7 @@
 {
   "name": "@alejandrorm-dev/mx-hooks",
   "version": "1.0.0",
+  "private": false,
   "description": "Custom React hooks for managing state and effects in a more modular way",
   "main": "index.js",
   "type": "module",
@@ -53,5 +54,9 @@
     ">0.2%",
     "not dead",
     "not op_mini all"
-  ]
+  ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  }
 }
