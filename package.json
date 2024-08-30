@@ -1,0 +1,21 @@
+{
+  "name": "mx-hooks",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "vitest"
+  },
+  "author": "Alejandro Ramírez Muñoz",
+  "license": "MIT",
+  "devDependencies": {
+    "@testing-library/jest-dom": "^6.5.0",
+    "@testing-library/react-hooks": "^8.0.1",
+    "react-test-renderer": "^16.14.0",
+    "vitest": "^2.0.5"
+  },
+  "dependencies": {
+    "react": "^16.14.0"
+  }
+}
