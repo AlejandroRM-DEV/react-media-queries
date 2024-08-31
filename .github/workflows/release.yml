@@ -1,4 +1,4 @@
-name: Release mx-hooks
+name: Release
 
 on:
   push:

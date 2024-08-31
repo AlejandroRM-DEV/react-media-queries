@@ -1,8 +1,13 @@
 # React Media Queries
 
-<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+![Build Status](https://img.shields.io/github/actions/workflow/status/AlejandroRM-DEV/react-media-queries/release.yml?branch=main)
+![npm version](https://img.shields.io/npm/v/@alejandrorm-dev/react-media-queries)
+![npm](https://img.shields.io/npm/dw/@alejandrorm-dev/react-media-queries)
+![License](https://img.shields.io/badge/license-MIT-blue)
+![GitHub issues](https://img.shields.io/github/issues/AlejandroRM-DEV/react-media-queries)
+![GitHub forks](https://img.shields.io/github/forks/AlejandroRM-DEV/react-media-queries)
+![GitHub stars](https://img.shields.io/github/stars/AlejandroRM-DEV/react-media-queries)
 [![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
-<!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 `react-media-queries` is a React hooks library that provides useful custom hooks for responsive design and media queries.
 
@@ -14,10 +19,7 @@ npm i @alejandrorm-dev/react-media-queries
 
 ## Demo
 
-
 https://github.com/user-attachments/assets/dd7719a8-a3bd-4da5-93c2-126bdfc8ceb7
-
-
 
 ## Hooks
 
