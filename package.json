@@ -1,6 +1,6 @@
 {
   "name": "@alejandrorm-dev/react-media-queries",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "private": false,
   "description": "React hooks library that provides useful custom hooks for responsive design and media queries.",
   "main": "index.js",
