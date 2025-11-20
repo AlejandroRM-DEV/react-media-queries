@@ -9,85 +9,73 @@
 ![GitHub stars](https://img.shields.io/github/stars/AlejandroRM-DEV/react-media-queries)
 [![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
 
-`react-media-queries` is a React hooks library that provides useful custom hooks for responsive design and media queries.
+A lightweight, performant React hooks library for responsive design and media query management. Built with TypeScript and optimized for modern React applications, including SSR support.
+
+## Table of Contents
+
+- [Features](#features)
+- [Installation](#installation)
+- [Demo](#demo)
+- [Usage](#usage)
+- [API Reference](#api-reference)
+- [SSR Support](#ssr-support)
+- [License](#license)
+- [Contributing](#contributing)
+- [Contributors](#contributors-)
+
+## Features
+
+- 🚀 **Performant**: Uses `useSyncExternalStore` for optimal performance and React 18+ compatibility
+- 🔄 **SSR Compatible**: Handles server-side rendering gracefully
+- 🎯 **TypeScript**: Full TypeScript support with type definitions
+- 🪝 **Hooks-Based**: Modern React hooks API
+- ⚡ **Efficient**: Shared stores prevent duplicate media query listeners
 
 ## Installation
 
 ```bash
-npm i @alejandrorm-dev/react-media-queries
+npm install @alejandrorm-dev/react-media-queries
 ```
 
 ## Demo
 
 https://github.com/user-attachments/assets/dd7719a8-a3bd-4da5-93c2-126bdfc8ceb7
 
-## Hooks
+## Usage
 
-### useMediaQuery
+```typescript
+import { useMediaQuery } from "@alejandrorm-dev/react-media-queries";
 
-A React hook for evaluating a media query.
+function ResponsiveComponent() {
+	const isLargeScreen = useMediaQuery("(min-width: 1200px)");
 
-#### Usage
-
-```javascript
-import { useMediaQuery } from 'mx-hooks';
-
-function MyComponent() {
-  const isLargeScreen = useMediaQuery('(min-width: 1200px)');
-
-  return <div>{isLargeScreen ? 'Large screen' : 'Small screen'}</div>;
-}
-```
-
-### useMediaQueries
-
-A React hook that provides boolean values for common media query states.
-
-#### Usage
-
-```javascript
-import { useMediaQueries } from 'mx-hooks';
-
-function MyComponent() {
-  const { isDesktop, isTablet, isMobile, isLandscape, isPortrait } = useMediaQueries();
-
-  return (
-    <div>
-      <p>Device type: {isDesktop ? 'Desktop' : isTablet ? 'Tablet' : 'Mobile'}</p>
-      <p>Orientation: {isLandscape ? 'Landscape' : 'Portrait'}</p>
-    </div>
-  );
+	return (
+		<div>{isLargeScreen ? "Large screen layout" : "Small screen layout"}</div>
+	);
 }
 ```
 
 ## API Reference
 
-### useMediaQuery(query: string): boolean
+### `useMediaQuery(query: string): boolean`
 
-- `query`: A media query string to evaluate.
-- Returns: `true` if the media query matches the current viewport, `false` otherwise.
+Evaluates a single CSS media query and returns its current match state.
 
-### useMediaQueries(queries?: object): object
+**Parameters:**
 
-- `queries` (optional): An object containing custom media query strings. If not provided, default queries will be used.
-- Returns: An object with the following boolean properties:
-  - `isDesktop`: `true` if the viewport width is at least 1025px.
-  - `isTablet`: `true` if the viewport width is between 768px and 1024px.
-  - `isMobile`: `true` if the viewport width is up to 767px.
-  - `isLandscape`: `true` if the viewport orientation is landscape.
-  - `isPortrait`: `true` if the viewport orientation is portrait.
+- `query` (string): The CSS media query string to evaluate (e.g., `"(min-width: 768px)"`)
 
-## Default Media Queries
+**Returns:** `boolean` - `true` if the media query matches, `false` otherwise. Returns `false` during SSR.
 
-The `useMediaQueries` hook uses the following default media queries:
+**Example:**
 
-- Desktop: `(min-width: 1025px)`
-- Tablet: `(min-width: 768px) and (max-width: 1024px)`
-- Mobile: `(max-width: 767px)`
-- Landscape: `(orientation: landscape)`
-- Portrait: `(orientation: portrait)`
+```typescript
+const isTablet = useMediaQuery("(min-width: 768px) and (max-width: 1024px)");
+```
 
-You can override these by passing your own queries object to `useMediaQueries`.
+## SSR Support
+
+The hook is designed to work seamlessly in server-side rendering environments. During SSR, `useMediaQuery` returns `false`. On the client, the value updates to reflect the actual media query state.
 
 ## License
 
