@@ -1,5 +1,21 @@
 
 
+## [2.0.0](https://github.com/AlejandroRM-DEV/react-media-queries/compare/1.0.2...2.0.0) (2025-11-20)
+
+
+### ⚠ BREAKING CHANGES
+
+* useMediaQueries hook has been removed. Use useMediaQuery directly for individual queries.
+
+### Features
+
+* migrate to TypeScript and refactor useMediaQuery with useSyncExternalStore ([c15e823](https://github.com/AlejandroRM-DEV/react-media-queries/commit/c15e823ce0888b2a6b72e1db449b4cf795f74d4b))
+
+
+### Continuous Integration
+
+* update node version to 20 ([5241bfc](https://github.com/AlejandroRM-DEV/react-media-queries/commit/5241bfca464f0f90d2f2661dd1073a6cf4b825b5))
+
 ## [1.0.2](https://github.com/AlejandroRM-DEV/react-media-queries/compare/1.0.1...1.0.2) (2024-08-31)
 
 
